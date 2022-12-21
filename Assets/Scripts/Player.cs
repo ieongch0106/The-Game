@@ -6,6 +6,8 @@ public enum SIDE { left, mid, right };
 public class Player : MonoBehaviour
 {
     public SIDE m_side = SIDE.mid;
+    private float max_health = 5;
+    private float currentHealth;
     private int player_health;
     float NewPos;
     float midPos;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
     internal float PosValue = 4.5f;
     public float gravity = 9.8f;
     public AudioSource footsteps, sliding, jumping, gettingHit;
+    [SerializeField] private HealthBar _healthBar;  
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,8 @@ public class Player : MonoBehaviour
         velocity = 6f;
         player_health = 5;
         isDead = false;
+        currentHealth = max_health;
+        _healthBar.UpdateHealthBar(max_health, currentHealth);
     }
 
     // Update is called once per frame
@@ -127,9 +132,15 @@ public class Player : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Debug.Log(hit.transform.name);
-        if (hit.transform.name == "Obstacle" || hit.transform.name == "Cart") {
-            player_health -= 1;
+        if (hit.transform.name == "Obstacle" || hit.transform.name == "Cart" 
+        || hit.transform.name == "SM_Bld_Wall_01" || hit.transform.name == "SM_Env_Rock_012" 
+        || hit.transform.name == "SM_Bld_Stall_04" || hit.transform.name == "SM_Env_Rock_011" 
+        || hit.transform.name == "SM_Env_Hedge_01" || hit.transform.name == "SM_Bld_Wall_01 (1)") {
+            currentHealth = currentHealth-1;
+            _healthBar.UpdateHealthBar(max_health, currentHealth);
             animation_controller.Play("GettingHit");
         }
     }
+
+    
 }
