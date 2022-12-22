@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             isDead = true;
             velocity = 0;
             animation_controller.SetTrigger("death");
-            Invoke(callDeathScene(), 5);
+            Invoke("callDeathScene", 5);
 
         }
 
