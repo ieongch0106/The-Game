@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1413767171204683965}
+  - component: {fileID: 533246526}
   m_Layer: 0
   m_Name: Variant 0
   m_TagString: Untagged
@@ -36,6 +37,21 @@ Transform:
   m_Father: {fileID: 1413767171234845355}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533246526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413767171204683964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb7c90768870de43bb27fbe4fec8daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 1413767171167761669}
+  bullet: {fileID: 2872675951605255502, guid: c6f352afb18d34e4f95c9b42ba672c39, type: 3}
+  bulletDelay: 2
 --- !u!1 &1413767171234845354
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 106386, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_Name
-      value: Character_Viking_Black
+      value: Bot
       objectReference: {fileID: 0}
     - target: {fileID: 108624, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_IsActive
@@ -149,21 +165,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 461552, guid: 46f578172acf555439ea7037b277bd58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461552, guid: 46f578172acf555439ea7037b277bd58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.46
+      objectReference: {fileID: 0}
     - target: {fileID: 484542, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 484542, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -8.88
       objectReference: {fileID: 0}
     - target: {fileID: 484542, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.56
+      value: 0.087
       objectReference: {fileID: 0}
     - target: {fileID: 484542, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 4.97
       objectReference: {fileID: 0}
     - target: {fileID: 484542, guid: 46f578172acf555439ea7037b277bd58, type: 3}
       propertyPath: m_LocalRotation.w
@@ -354,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475264, guid: 067161ae46386c14c842800eb27cf27b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 475264, guid: 067161ae46386c14c842800eb27cf27b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -404,7 +428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 168002, guid: 1843138d5306a9d4c963179833cac96c, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_MusketPistol_01
+      value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 449674, guid: 1843138d5306a9d4c963179833cac96c, type: 3}
       propertyPath: m_RootOrder
@@ -452,3 +476,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1843138d5306a9d4c963179833cac96c, type: 3}
+--- !u!1 &1413767171167761669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168002, guid: 1843138d5306a9d4c963179833cac96c, type: 3}
+  m_PrefabInstance: {fileID: 1413767171167921479}
+  m_PrefabAsset: {fileID: 0}
