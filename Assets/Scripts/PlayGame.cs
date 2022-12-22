@@ -20,6 +20,12 @@ public class PlayGame : MonoBehaviour
     public void EndToPlayScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
+    public void SuccessToPlayScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+    }
+    public void SuccessToMainMenu(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
+    }
     
     public void Quit(){
         Application.Quit();
