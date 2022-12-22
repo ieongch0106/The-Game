@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapGenerate.unity
     guid: f8cb4d42cffd7be4a82d388a3ad7f3ab
+  - enabled: 1
+    path: Assets/Scenes/InstructionsScene.unity
+    guid: cc5a0869bbf684049980ea4dce57d164
+  - enabled: 1
+    path: Assets/Scenes/Die-End_scene.unity
+    guid: f4ccc9010702c4bb383da421a6ca2cf0
+  - enabled: 1
+    path: Assets/Scenes/Success.unity
+    guid: bd2426833fe294aa6b46c62abbf074a1
   m_configObjects: {}
