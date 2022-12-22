@@ -8,6 +8,18 @@ public class PlayGame : MonoBehaviour
     public void playGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void instructionTostartPage(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+    public void StartToInstructionScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void EndToStartScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+    }
+    public void EndToPlayScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
     
     public void Quit(){
         Application.Quit();
