@@ -7,12 +7,11 @@ public class MathSolve : MonoBehaviour
 {
     // Start is called before the first frame update
     private int result;
-    public TMP_InputField input;
     public TMP_Text showMath;
 
     void Start()
     {
-        CreateMath();
+        // CreateMath();
     }
 
     public void CreateMath()
