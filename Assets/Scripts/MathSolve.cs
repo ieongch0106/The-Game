@@ -8,6 +8,7 @@ public class MathSolve : MonoBehaviour
     // Start is called before the first frame update
     private int result;
     public TMP_Text showMath;
+    public GameObject player;
 
     void Start()
     {
@@ -25,13 +26,11 @@ public class MathSolve : MonoBehaviour
 
     public void CheckAnswer(string ans)
     {
-        if (int.Parse(ans) == result)
+        if (int.Parse(ans) != result)
         {
-            Debug.Log("correct");
+            player.GetComponent<Player>().currentHealth -= 1;
         }
-        else
-        {
 
-        }
+        player.GetComponent<Player>().MathSolve();
     }
 }
