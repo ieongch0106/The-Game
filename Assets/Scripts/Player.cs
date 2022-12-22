@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum SIDE { left, mid, right };
 public class Player : MonoBehaviour
@@ -59,10 +60,12 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (player_health <= 0 && !isDead) {
+        if (currentHealth <= 0 && !isDead) {
             isDead = true;
             velocity = 0;
             animation_controller.SetTrigger("death");
+            Invoke(callDeathScene(), 5);
+
         }
 
         if (animation_controller.GetCurrentAnimatorStateInfo(0).IsName("GettingHit")) {
@@ -127,6 +130,9 @@ public class Player : MonoBehaviour
         } else {
             finalPosY -= gravity * Time.deltaTime;
         }
+    }
+    public void callDeathScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
