@@ -9,7 +9,12 @@ public class MathSolve : MonoBehaviour
     private int result;
     public TMP_Text showMath;
 
-    void CreateMath()
+    void Start()
+    {
+        // CreateMath();
+    }
+
+    public void CreateMath()
     {
         int a = Random.Range(1, 100);
         int b = Random.Range(1, 100);
@@ -23,6 +28,10 @@ public class MathSolve : MonoBehaviour
         if (int.Parse(ans) == result)
         {
             Debug.Log("correct");
+        }
+        else
+        {
+
         }
     }
 }
